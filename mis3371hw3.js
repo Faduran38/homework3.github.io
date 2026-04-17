@@ -30,6 +30,8 @@ function myFunction() {
           return false;
         }
       }
+      function validateDateOfBirth() {
+        
       function validateEmail() {
         let x = document.getElementById("email").value;
         if (x < 7) {
