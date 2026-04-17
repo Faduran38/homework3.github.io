@@ -23,21 +23,21 @@ function myFunction() {
       else {
         x.type = "password";
       }
-      function validatefirstname() {
+      function validateFirstName() {
         let x = document.getElementById("firstname").value;
         if ( x == "") {
           alert("Incorrect input for name");
           return false;
         }
       }
-      function validateemail() {
+      function validateEmail() {
         let x = document.getElementById("email").value;
         if (x < 7) {
           alert("Not enough character's");
           return false;
         }
       }
-      function validateaddress() {
+      function validateAddress() {
         let x = document.getElementById("address1").value;
         if ( x == "") {
           alert("Please enter in your address");
@@ -46,7 +46,7 @@ function myFunction() {
           document.getElementById("address_check").innerHTML = "Fits parameters";
         }
       }
-      function validatephone() {
+      function validatePhone() {
         let x = document.getElementById("phone").value;
         if ( x < 10) {
           alert("Not enough characters");
