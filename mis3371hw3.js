@@ -23,6 +23,14 @@ function myFunction() { //Validates the ssn input, if it doesn't fit requirement
       else {
         x.type = "password";
       }
+      const ssn = document.getElementById("ssn");
+      ssn.addEventListener("keydown", (e)) {
+        if(e.target.value.length === 3) {
+          ssn.value = ssn.value + "-"};
+        if(e.target.value.length === 7) {
+          ssn.value = ssn.value + "-"};
+      }
+      
       function validateFirstName() {
         let x = document.getElementById("firstname").value;
         if ( x == "") {
