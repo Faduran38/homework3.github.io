@@ -9,7 +9,7 @@ function validateSsn() { //Validates the ssn input, if it doesn't fit requiremen
     text = "Input is valid";
   }
   function maskPass() { // Used to mask the password field
-    var x = document.getElementById("pass");
+    var x = document.getElementById("password");
     if(x.type === "password") {
       x.type = "text";}
     else {
