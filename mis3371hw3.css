@@ -25,7 +25,7 @@ td.form, table.form {
   font-family: "Times New Roman", Times, serif;
 }
 #pain {
-  text-align:right;
+  text-align:left;
 }
 #comments {
   border-style: bold;
