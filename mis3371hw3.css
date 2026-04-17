@@ -29,6 +29,7 @@ td.form, table.form {
 }
 #comments {
   border-style: bold;
+  text-align:left;
 }
 a:visited {
   color: red;
