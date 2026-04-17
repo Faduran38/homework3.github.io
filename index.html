@@ -255,8 +255,10 @@ Description: This is a patient registration form to collect information such as 
         <div id="password">
           <label for="pass">Password: </label>
           <input type="password" id="pass" name="pass" value="FakePSW"
-            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" placeholder="Please enter in a password"
+            minlength="8" maxlength="30" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" placeholder="Please enter in a password"
             required>
+          <input type="checkbox" onclick="myFunction()">Show Password
+          <span id="pass_check">
         </div>
       </tr>
       <tr>
