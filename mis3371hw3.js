@@ -30,8 +30,13 @@ function myFunction() { //Validates the ssn input, if it doesn't fit requirement
           return false;
         }
       }
-      function validateDateOfBirth() {
-        
+      const inputDate = new Date("1906-04-16"); //This makes sure that if the date input is greated than 120 years, there will be an error
+      const currentDate = new Date();
+      if (inputDate > currentDate) {
+        console.log("Date is incorrect"); }
+      else {
+        console.log("Date is correct");
+      }
       function validateEmail() { // Validates the email to fit the requirements 
         let x = document.getElementById("email").value;
         if (x < 7) {
