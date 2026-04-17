@@ -54,7 +54,7 @@ Description: This is a patient registration form to collect information such as 
                   <li><label for="firstname">First Name: </label></li>
                   <input type="text" size="30"
                     minlength="1" maxlength="30"
-                    pattern="[A-Z^a-z-' ^~]{2,}"
+                    pattern="[A-Za-z-']{2,}"
                     name="firstname"
                     placeholder="First Name"
                     required>
@@ -63,11 +63,11 @@ Description: This is a patient registration form to collect information such as 
                     minlength="1" maxlength="1"
                     pattern="[A-Za-z]{1,}"
                     name="middleinitial"
-                    placeholder="MI"
-                    required>
+                    placeholder="MI"> 
                   <li><label for="lastname">Last Name: </label></li>
                   <input type="text" size="30"
                     minlength="1" maxlength="30"
+                    pattern="[A-Za-z-']{2,}"
                     name="lastname"
                     placeholder="Last Name"
                     required>
