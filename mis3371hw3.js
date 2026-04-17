@@ -19,7 +19,7 @@ function validateSsn() { //Validates the ssn input, if it doesn't fit requiremen
     function maskReenter() {
       var x = document.getElementById("reenter");
       if(x.type === "password") {
-        x.typw = "text";}
+        x.type = "text";}
       else {
         x.type = "password";
       }
