@@ -90,7 +90,7 @@ Description: This is a patient registration form to collect information such as 
           <td><label for="ssn">SSN: </label></td>
           <td>
             <input type="password" id="ssn" name="ssn" pattern="\d{3}-\d{2}-\d{4}"
-              value="FakePSW" maxlength="11"
+              value="FakePSW" minlength= "9" maxlength="11"
               title="Enter your SSN" required>
             <span id="ssn_check"></span>
           </td>
