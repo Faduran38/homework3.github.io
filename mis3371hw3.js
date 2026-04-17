@@ -41,11 +41,9 @@ function validateSsn() { //Validates the ssn input, if it doesn't fit requiremen
       }
       
       function validateFirstName() {
-        var namePattern = /^[A-Za-z-']+$;
-        if (!namePattern.test(firstName) {
-          return "Invalid first name.";
-      }
-        return "Valid name."
+        const firstNameInput = document.getElementById("firstname").value;
+        firstNameInput.addEventListener('input', function(validateFirstName) {
+          console.log("Correct name input");
     }
       const inputDate = new Date("1906-04-16"); //This makes sure that if the date input is greated than 120 years, there will be an error
       const currentDate = new Date();
