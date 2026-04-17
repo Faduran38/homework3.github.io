@@ -42,9 +42,12 @@ function validateSsn() { //Validates the ssn input, if it doesn't fit requiremen
       
       function validateFirstName() {
         let x = document.getElementById("firstname").value;
-        if ( x == "") {
-          alert("Incorrect input for name"); //If first name doesn't fit the requirements, returns this message
-          return false;
+        if ( x.length < 2) {
+          alert("Not long enough input for name"); //If first name doesn't fit the requirements, returns this message
+        }
+        else {
+          if(x.match([A-za-z-'])) {
+              document.getElementById("gov_name").innerHTML = "";
         }
       }
       const inputDate = new Date("1906-04-16"); //This makes sure that if the date input is greated than 120 years, there will be an error
