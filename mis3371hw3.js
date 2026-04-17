@@ -1,4 +1,4 @@
-function myFunction() { //Validates the ssn input, if it doesn't fit requirements, it returns a message
+function validateSsn() { //Validates the ssn input, if it doesn't fit requirements, it returns a message
   let x =
     document.getElementById("ssn").value;
   let text;
@@ -8,7 +8,7 @@ function myFunction() { //Validates the ssn input, if it doesn't fit requirement
   else {
     text = "Input is valid";
   }
-  function myFunction() { // Used to mask the password field
+  function maskPass() { // Used to mask the password field
     var x = document.getElementById("pass");
     if(x.type === "password") {
       x.type = "text";}
@@ -16,7 +16,7 @@ function myFunction() { //Validates the ssn input, if it doesn't fit requirement
       x.type = "password";
     }
   }
-    function myFunction() {
+    function maskReenter() {
       var x = document.getElementById("reenter");
       if(x.type === "password") {
         x.typw = "text";}
@@ -24,7 +24,7 @@ function myFunction() { //Validates the ssn input, if it doesn't fit requirement
         x.type = "password";
       }
     }
-    function myFunction() { //Used to mask the ssn 
+    function maskSsn() { //Used to mask the ssn 
       var x = document.getElementById("ssn");
       if(x.type === "password") 
          {
