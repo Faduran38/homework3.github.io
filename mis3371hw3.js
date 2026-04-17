@@ -23,8 +23,8 @@ function myFunction() { //Validates the ssn input, if it doesn't fit requirement
       else {
         x.type = "password";
       }
-      const ssn = document.getElementById("ssn");
-      ssn.addEventListener("keydown", (e)) {
+      const ssn = document.getElementById("ssn"); //This adds dashes after every 3 digits entered in for ssn
+      ssn.addEventListener("input", (e)) {
         if(e.target.value.length === 3) {
           ssn.value = ssn.value + "-"};
         if(e.target.value.length === 7) {
