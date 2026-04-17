@@ -46,7 +46,7 @@ function validateSsn() { //Validates the ssn input, if it doesn't fit requiremen
           alert("Not long enough input for name"); //If first name doesn't fit the requirements, returns this message
         }
         else {
-          if(x.match([A-za-z-'])) {
+          if(x.match([A-Za-z-'])) {
               document.getElementById("gov_name").innerHTML = "";
         }
       }
