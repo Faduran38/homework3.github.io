@@ -6,3 +6,25 @@ Date Last Edited: April 17, 2026
 Version: 1.0
 Description: This is a style sheet to make the patient registration form more appealing to the eye
 */
+body {
+  background-color: #92a8d1;
+  font-family: "Times New Roman", Times, serif;
+  text-align: left;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+h2 {
+  text-align: center;
+  font-family: "Times New Roman", Times, sesrif;
+}
+a:visited {
+  color: red;
+}
+img {
+  display: block;
+  margin: auto;
+  width: 20%;
+}
