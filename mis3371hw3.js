@@ -15,6 +15,7 @@ function myFunction() { //Validates the ssn input, if it doesn't fit requirement
     else {
       x.type = "password";
     }
+  }
     function myFunction() {
       var x = document.getElementById("reenter");
       if(x.type === "password") {
@@ -22,6 +23,7 @@ function myFunction() { //Validates the ssn input, if it doesn't fit requirement
       else {
         x.type = "password";
       }
+    }
     function myFunction() { //Used to mask the ssn 
       var x = document.getElementById("ssn");
       if(x.type === "password") 
