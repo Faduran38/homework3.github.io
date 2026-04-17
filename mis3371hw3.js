@@ -1,4 +1,4 @@
-function myFunction() {
+function myFunction() { //Validates the ssn input, if it doesn't fit requirements, it returns a message
   let x =
     document.getElementById("ssn").value;
   let text;
@@ -8,14 +8,14 @@ function myFunction() {
   else {
     text = "Input is valid";
   }
-  function myFunction() {
+  function myFunction() { // Used to mask the password field
     var x = document.getElementById("pass");
     if(x.type === "password") {
       x.type = "text";}
     else {
       x.type = "password";
     }
-    function myFunction() {
+    function myFunction() { //Used to mask the ssn 
       var x = document.getElementById("ssn");
       if(x.type === "password") 
          {
@@ -26,20 +26,20 @@ function myFunction() {
       function validateFirstName() {
         let x = document.getElementById("firstname").value;
         if ( x == "") {
-          alert("Incorrect input for name");
+          alert("Incorrect input for name"); //If first name doesn't fit the requirements, returns this message
           return false;
         }
       }
       function validateDateOfBirth() {
         
-      function validateEmail() {
+      function validateEmail() { // Validates the email to fit the requirements 
         let x = document.getElementById("email").value;
         if (x < 7) {
           alert("Not enough character's");
           return false;
         }
       }
-      function validateAddress() {
+      function validateAddress() { // Validates the address to fit the requirements
         let x = document.getElementById("address1").value;
         if ( x == "") {
           alert("Please enter in your address");
@@ -48,7 +48,7 @@ function myFunction() {
           document.getElementById("address_check").innerHTML = "Fits parameters";
         }
       }
-      function validatePhone() {
+      function validatePhone() { //Validates phone number to fit requirements 
         let x = document.getElementById("phone").value;
         if ( x < 10) {
           alert("Not enough characters");
@@ -56,7 +56,7 @@ function myFunction() {
         else {
           document.getElementById("phone_check").innerHTML = "Fits parameters";
         }
-        var upperCaseLetters = /[A-Z]/g;
+        var upperCaseLetters = /[A-Z]/g; // Validates the password field to make sure it has all of the elements required
         if(myInput.value.match(upperCaseLetters)) {
           capital.classList.remove("invalid");
           capital.classList.add("valid"); }
