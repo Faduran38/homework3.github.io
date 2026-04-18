@@ -60,6 +60,8 @@ function validateSsn() { //Validates the ssn input, if it doesn't fit requiremen
           if(x.match(/[A-Za-z-']+$/)) {
             document.getElementById("gov_name").innerHTML = "";
             firstnameflag=0; }
+          checkflags();
+        }
           
       const inputDate = new Date("1906-04-16"); //This makes sure that if the date input is greated than 120 years, there will be an error
       const currentDate = new Date();
