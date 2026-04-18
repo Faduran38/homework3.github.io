@@ -84,6 +84,14 @@ function validateSsn() { //Validates the ssn input, if it doesn't fit requiremen
         else {
           document.getElementById("phone_check").innerHTML = "Fits parameters";
         }
+        function checkPasswords() {
+          x=document.getElementById("pass").value;
+          y=document.getElementById("reenter").value;
+          if(x.value != "" && x==y) {
+            document.getElementById("pass_check").innerHTML = "Passwords match."; }
+          else {
+            document.getElementById("reenter").innerHTML = "Passwords need to match."; 
+          }
         var upperCaseLetters = /[A-Z]/g; // Validates the password field to make sure it has all of the elements required
         if(myInput.value.match(upperCaseLetters)) {
           capital.classList.remove("invalid");
