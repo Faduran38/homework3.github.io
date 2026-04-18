@@ -5,10 +5,6 @@ Date Created: April 10, 2026
 Date Updated: April 17, 2026
 Description: Validating elements and adding advanced editing 
 */
-function start() {
-  let firstnameflag;
-  let lastnameflag;
-}
 function validateSsn() { //Validates the ssn input, if it doesn't fit requirements, it returns a message
   let x =
     document.getElementById("ssn").value;
@@ -44,23 +40,17 @@ function validateSsn() { //Validates the ssn input, if it doesn't fit requiremen
         x.type = "password";
       }
       const ssn = document.getElementById("ssn"); //This adds dashes after every 3 digits entered in for ssn
-      ssn.addEventListener("input", (e)) {
+      ssn.addEventListener("input", (e)) 
         if(e.target.value.length === 3) {
           ssn.value = ssn.value + "-"};
         if(e.target.value.length === 7) {
           ssn.value = ssn.value + "-"};
       }
-      function validateFirstName() {
-       let x = document.getElementById("firstname").value;
-        firstnameflag=1;
-        if(x.length < 2) {
-          document.getElementById("gov_name").innerHTML = "Not enough characters";
-          error_flag = 1; }
-        else {
-          if(x.match(/[A-Za-z-']+$/)) {
-            document.getElementById("gov_name").innerHTML = "";
-            firstnameflag=0; }
-          checkflags();
+      function validateFirstName(firstname) {
+       if( typeof firstname != "string" || /[A-Za-z-']+/g.test(firstname)) {
+         return false;
+       }
+        return true;
         }
           
       const inputDate = new Date("1906-04-16"); //This makes sure that if the date input is greated than 120 years, there will be an error
