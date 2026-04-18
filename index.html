@@ -58,7 +58,9 @@ Description: This is a patient registration form to collect information such as 
                     id="firstname"
                     name="firstname"
                     placeholder="First Name"
-                    oninput="validateFirstName()"
+                    onblur="validateFirstName()"
+                    oninvalid="this.setCustomValidity('First name not accepted.')"
+                    oninput="this.setCustomValidity('')"
                     required>
                   <li><label for="middleinitial">Middle Initial: </label></li>
                   <input type="text" size="30"
