@@ -65,7 +65,7 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
         errorcaught = 1; }
         else {
           if(x.match(/[A-Za-z-']+$/)) {
-            document.getElementById("gov_name").innerHTML= '';
+            document.getElementById("gov_name").innerHTML= "";
             firstnameerror = 0; }
           }
         checkerror();
