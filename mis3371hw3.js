@@ -13,6 +13,7 @@ function initialstart() {
   let addresserror;
   let passworderror;
   checkdata();
+  checkerror();
 }
 function validatessn() { //Validates the ssn input, if it doesn't fit requirements, it returns a message
   let x =
@@ -65,6 +66,7 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
             document.getElementById("gov_name").innerHTML= '';
             firstnameerror = 0; }
           }
+        checkerror();
   } 
           
       const inputDate = new Date("1906-04-16"); //This makes sure that if the date input is greated than 120 years, there will be an error
