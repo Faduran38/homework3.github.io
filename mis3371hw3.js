@@ -60,7 +60,8 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
         let x = document.getElementById("firstname").value;
         firstnameerror = 1;
         if(x.length< 1) {
-          document.getElementById("gov_name").innerHTML = "Please add more characters.";}
+          document.getElementById("gov_name").innerHTML = "Please add more characters.";
+        errorcaught = 1; }
         else {
           if(x.match(/[A-Za-z-']+$/)) {
             document.getElementById("gov_name").innerHTML= '';
@@ -72,7 +73,8 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
     let x = document.getElementById("lastname").value;
     lastnameerror = 1;
     if(x.length<1) {
-      document.getElementById("gov_name").innerHTML = "Please add more characters.";}
+      document.getElementById("gov_name").innerHTML = "Please add more characters.";
+    errorcaught=1; }
     else {
       if(x.match(/[A-Za-z-']+$/)) {
         document.getElementById("gove_name").innerHTML = '';
@@ -91,7 +93,8 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
         let x = document.getElementById("email").value;
         emailerror= 1;
         if (x.length < 5) {
-          document.getElementById("email_check").innerHTML = "Invalid email length.";}
+          document.getElementById("email_check").innerHTML = "Invalid email length.";
+        errorcaught=1; }
         else {
           if(x.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
             document.getElementById("email_check").innerHTML = '';
