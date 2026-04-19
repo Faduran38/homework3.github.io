@@ -149,6 +149,11 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
         else {
           length.classList.remove("valid");
           length.classList.add("invalid); }
-            
-          
+                               
+function checkerror() {
+  if (firstnameerror + lastnameerror + emailerror + addresserror + phoneerror + passworderror == 0)
+  {
+    document.getElementById("submit").disabled = false;
+  }
+}
     
