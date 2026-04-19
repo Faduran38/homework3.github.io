@@ -68,7 +68,18 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
           }
         checkerror();
   } 
-          
+  function validatelastname() {
+    let x = document.getElementById("lastname").value;
+    lastnameerror = 1;
+    if(x.length<1) {
+      document.getElementById("gov_name").innerHTML = "Please add more characters.";}
+    else {
+      if(x.match(/[A-Za-z-']+$/)) {
+        document.getElementById("gove_name").innerHTML = '';
+        lastnameerror = 0;}
+    }
+    checkerror();
+  }
       const inputDate = new Date("1906-04-16"); //This makes sure that if the date input is greated than 120 years, there will be an error
       const currentDate = new Date();
       if (inputDate > currentDate) {
@@ -78,10 +89,8 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
       }
       function validateemail() { // Validates the email to fit the requirements 
         let x = document.getElementById("email").value;
-        if (x < 7) {
-          alert("Not enough character's");
-          return false;
-        }
+        if (x.length < 5) {
+          document.getElementById("
       }
       function validateaddress() { // Validates the address to fit the requirements
         let x = document.getElementById("address1").value;
