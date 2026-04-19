@@ -55,8 +55,17 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
         if(e.target.value.length === 7) {
           ssn.value = ssn.value + "-"};
       }
-      function validatefirstname()
-    
+      function validatefirstname() {
+        let x = document.getElementById("firstname").value;
+        firstnameerror = 1;
+        if(x.length< 1) {
+          document.getElementById("gov_name").innerHTML = "Please add more characters.";}
+        else {
+          if(x.match(/[A-Za-z-']+$/)) {
+            document.getElementById("gov_name").innerHTML= '';
+            firstnameerror = 0; }
+          }
+  } 
           
       const inputDate = new Date("1906-04-16"); //This makes sure that if the date input is greated than 120 years, there will be an error
       const currentDate = new Date();
