@@ -59,8 +59,7 @@ Description: This is a patient registration form to collect information such as 
                     name="firstname"
                     placeholder="First Name"
                     onblur="validatefirstname()"
-                    oninvalid="this.setCustomValidity('First name not accepted.')"
-                    oninput="this.setCustomValidity('')"
+                    oninput="validatefirstname()"
                     required>
                   <li><label for="middleinitial">Middle Initial: </label></li>
                   <input type="text" class="middlesize" size="30"
@@ -76,6 +75,8 @@ Description: This is a patient registration form to collect information such as 
                     id="lastname"
                     name="lastname"
                     placeholder="Last Name"
+                    onblur="validatelastname()"
+                    oninput="validatelastname()"
                     required>
             </ul>
           </span>
@@ -109,7 +110,7 @@ Description: This is a patient registration form to collect information such as 
         <td>
           <input type="text" size="30"
             minlength="2" maxlength="30" id="address1" name="address1"
-            placeholder="Primary Address" required>
+            placeholder="Primary Address" oninput="validateaddress()" onblu="validateaddress()" required>
           <span id="address_check"></span>
         </td>
       </tr>
@@ -118,7 +119,7 @@ Description: This is a patient registration form to collect information such as 
           <label for="city">City: </label>
           <input type="text" size="10" minlength="2" maxlength="30" id="city" name="city"
             required>
-          <label for="state">State: </label>
+          <label for="state" id="state" onblur="validatestate()">State: </label>
           <td>
             <!-- State List Referenced from W3 Schools -->
             <select required>
@@ -288,8 +289,9 @@ Description: This is a patient registration form to collect information such as 
       <tr>
         <td colspan="3">
           <center>
-            <input type="submit">
-            <input type="reset">
+            <input type="button" id="checkinput" value="Check all input" onclick='checkdata()'>
+            <input type="submit" value="Submit the form" id="submit" disabled>
+            <input type="reset" value="Clear all information">
           </center>
         </td>
       </tr>
