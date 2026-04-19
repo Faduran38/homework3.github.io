@@ -89,9 +89,16 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
       }
       function validateemail() { // Validates the email to fit the requirements 
         let x = document.getElementById("email").value;
+        emailerror= 1;
         if (x.length < 5) {
-          document.getElementById("
+          document.getElementById("email_check").innerHTML = "Invalid email length.";}
+        else {
+          if(x.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+            document.getElementById("email_check").innerHTML = '';
+            emailerror = 0;}
       }
+        checkerror();
+  }
       function validateaddress() { // Validates the address to fit the requirements
         let x = document.getElementById("address1").value;
         if ( x == "") {
