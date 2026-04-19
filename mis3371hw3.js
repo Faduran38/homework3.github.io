@@ -5,6 +5,14 @@ Date Created: April 10, 2026
 Date Updated: April 17, 2026
 Description: Validating elements and adding advanced editing 
 */
+function initialstart() {
+  let firstnameerror;
+  let lastnameerror;
+  let emailerror;
+  let phoneerror;
+  let addresserror;
+  let passworderror;
+}
 function validatessn() { //Validates the ssn input, if it doesn't fit requirements, it returns a message
   let x =
     document.getElementById("ssn").value;
