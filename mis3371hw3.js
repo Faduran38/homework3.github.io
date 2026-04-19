@@ -5,7 +5,7 @@ Date Created: April 10, 2026
 Date Updated: April 17, 2026
 Description: Validating elements and adding advanced editing 
 */
-function validateSsn() { //Validates the ssn input, if it doesn't fit requirements, it returns a message
+function validatessn() { //Validates the ssn input, if it doesn't fit requirements, it returns a message
   let x =
     document.getElementById("ssn").value;
   let text;
@@ -46,12 +46,8 @@ function validateSsn() { //Validates the ssn input, if it doesn't fit requiremen
         if(e.target.value.length === 7) {
           ssn.value = ssn.value + "-"};
       }
-      function validateFirstName(firstname) {
-       if( typeof firstname != "string" || /[A-Za-z-']+/g.test(firstname)) {
-         return false;
-       }
-        return true;
-        }
+      function validatefirstname()
+    
           
       const inputDate = new Date("1906-04-16"); //This makes sure that if the date input is greated than 120 years, there will be an error
       const currentDate = new Date();
@@ -60,14 +56,14 @@ function validateSsn() { //Validates the ssn input, if it doesn't fit requiremen
       else {
         console.log("Date is correct");
       }
-      function validateEmail() { // Validates the email to fit the requirements 
+      function validateemail() { // Validates the email to fit the requirements 
         let x = document.getElementById("email").value;
         if (x < 7) {
           alert("Not enough character's");
           return false;
         }
       }
-      function validateAddress() { // Validates the address to fit the requirements
+      function validateaddress() { // Validates the address to fit the requirements
         let x = document.getElementById("address1").value;
         if ( x == "") {
           alert("Please enter in your address");
@@ -76,7 +72,7 @@ function validateSsn() { //Validates the ssn input, if it doesn't fit requiremen
           document.getElementById("address_check").innerHTML = "Fits parameters";
         }
       }
-      function validatePhone() { //Validates phone number to fit requirements 
+      function validatephone() { //Validates phone number to fit requirements 
         let x = document.getElementById("phone").value;
         if ( x < 10) {
           alert("Not enough characters");
