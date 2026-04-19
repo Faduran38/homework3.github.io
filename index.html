@@ -97,7 +97,7 @@ Description: This is a patient registration form to collect information such as 
           <td><label for="ssn">SSN: </label></td>
           <td>
             <input type="password" id="ssn" name="ssn" pattern="\d{3}-\d{2}-\d{4}"
-              value="FakePSW" minlength= "9" maxlength="11"
+              value="FakePSW" minlength= "9" maxlength="11" oninput="validatessn()"
               title="Enter your SSN" required>
             <span id="ssn_check"></span>
           </td>
@@ -117,7 +117,7 @@ Description: This is a patient registration form to collect information such as 
       <tr class="form">
         <td align="right">
           <label for="city">City: </label>
-          <input type="text" size="10" minlength="2" maxlength="30" id="city" name="city"
+          <input type="text" size="10" minlength="2" maxlength="30" id="city" name="city" onblur="validatecity()" oninput="validatecity()"
             required>
           <label for="state" id="state" onblur="validatestate()">State: </label>
           <td>
@@ -206,7 +206,7 @@ Description: This is a patient registration form to collect information such as 
           <label for="email">Email: </label>
         </td>
         <td>
-          <input type="text" size="30" minlength="7" maxlength="35"
+          <input type="text" size="30" minlength="7" maxlength="35" onblur="validateemail()" oninput="validateemail()"
             id="email" name="email" placeholder="name@domain.tld" required>
         </td>
       </div>
