@@ -60,7 +60,7 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
       function validatefirstname() {
         let x = document.getElementById("firstname").value;
         firstnameerror = 1;
-        if(x.length< 1) {
+        if(x.length< 2) {
           document.getElementById("gov_name").innerHTML = "Please add more characters.";
         errorcaught = 1; }
         else {
@@ -73,7 +73,7 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
   function validatelastname() {
     let x = document.getElementById("lastname").value;
     lastnameerror = 1;
-    if(x.length<1) {
+    if(x.length<2) {
       document.getElementById("gov_name").innerHTML = "Please add more characters.";
     errorcaught=1; }
     else {
