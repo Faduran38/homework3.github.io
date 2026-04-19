@@ -12,6 +12,7 @@ function initialstart() {
   let phoneerror;
   let addresserror;
   let passworderror;
+  checkdata();
 }
 function validatessn() { //Validates the ssn input, if it doesn't fit requirements, it returns a message
   let x =
