@@ -6,6 +6,7 @@ Date Updated: April 17, 2026
 Description: Validating elements and adding advanced editing 
 */
 function initialstart() {
+  let errorcaught;
   let firstnameerror;
   let lastnameerror;
   let emailerror;
