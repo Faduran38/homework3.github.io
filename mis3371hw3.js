@@ -59,14 +59,14 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
       }
       function validatefirstname() {
         let x = document.getElementById("firstname").value;
-        firstnameerror = 1;
+        firstnameerror = "1";
         if(x.length< 2) {
           document.getElementById("gov_name").innerHTML = "Please add more characters.";
-        errorcaught = 1; }
+        errorcaught = "1"; }
         else {
           if(x.match(/[A-Za-z-']+$/)) {
             document.getElementById("gov_name").innerHTML= "";
-            firstnameerror = 0; }
+            firstnameerror = "0"; }
           }
         checkerror();
   } 
