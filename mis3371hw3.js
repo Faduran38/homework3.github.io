@@ -13,6 +13,7 @@ function initialstart() {
   let phoneerror;
   let addresserror;
   let passworderror;
+  let passworderror2;
   checkdata();
   checkerror();
 }
@@ -140,6 +141,18 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
          errorcaught=1; }
           checkerror();
         }
+  function validatepassword() {
+    passworderror2=0;
+    var passwordproduct;
+    var passwordinsert = document.getElementById("pass").value;
+    console.log(passwordinsert);
+    if(passwordinsert.search(/[a-z]/) <1){
+      passwordproduct = "Need atleast 1 lowercase letter.";
+      errorcaught=1;
+      passworderror=1;}
+    else{
+      passwordproduct = "" }
+    document.getElementById("pass_check").innerHTML = passwordproduct; 
         var upperCaseLetters = /[A-Z]/g; // Validates the password field to make sure it has all of the elements required
         if(myInput.value.match(upperCaseLetters)) {
           capital.classList.remove("invalid");
