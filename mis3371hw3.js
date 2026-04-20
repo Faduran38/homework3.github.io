@@ -9,7 +9,6 @@ function initialstart() { //This is initiating all of the variables that are ref
   var errorcaught = 0;
   console.log(errorcaught);
   checkdata();
-  checkerror();
 }
 function validatessn() { //Validates the ssn input, if it doesn't fit requirements, it returns a message
   let x =
@@ -61,7 +60,6 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
           if(x.match(/[A-Za-z-']+$/)) { // If the first name matches the pattern then the error flag turns off 
             document.getElementById("gov_name").innerHTML= ""; }
           }
-        checkerror();
   } 
   function validatelastname() { // Validates the last name entered
     let x = document.getElementById("lastname").value;
@@ -72,7 +70,6 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
       if(x.match(/[A-Za-z-']+$/)) { // If the last name matches this pattern, it will be valid
         document.getElementById("gove_name").innerHTML = '';}
     }
-    checkerror();
   }
       const inputDate = new Date("1906-04-16"); //This makes sure that if the date input is greated than 120 years, there will be an error
       const currentDate = new Date();
@@ -90,7 +87,6 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
           if(x.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) { // Email must fit this pattern for the error to turn off 
             document.getElementById("email_check").innerHTML = '';}
       }
-        checkerror();
   }
       function validateaddress() { // Validates the address to fit the requirements
         let x = document.getElementById("address1").value;
@@ -101,7 +97,6 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
           if(x.length>2) { // Email address must be greater than 2 characters for the error flag to turn off 
             document.getElementById("address_check").innerHTML = "";}
         }
-          checkerror();
       }
       function validatephone() { //Validates phone number to fit requirements 
         let x = document.getElementById("phone").value;
@@ -111,7 +106,6 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
         else {
           document.getElementById("phone_check").innerHTML = "";
         }
-        checkerror();
       }
         function checkpasswords() { // This makes sure that both of the passwords match 
           x=document.getElementById("pass").value;
@@ -121,7 +115,6 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
           else {
             document.getElementById("reenter_check").innerHTML = "Passwords need to match."; 
          errorcaught=1; }
-          checkerror();
         }
   function validatepassword() { //Validates the password input 
     var passwordproduct;
@@ -136,7 +129,6 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
     if(passwordinsert.length < 8) {
       passwordproduct = "Must enter more characters."; }
     document.getElementById("pass_check").innerHTML = passwordproduct;
-    checkerror();
   }
         var upperCaseLetters = /[A-Z]/g; // Gives a list of the password requirements to make sure it has all of the elements
         if(myInput.value.match(upperCaseLetters)) {
