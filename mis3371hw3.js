@@ -123,8 +123,11 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
           document.getElementById("phone_check").innerHTML = "Invalid length.";
           errorcaught=1;}
         else {
-          if(x.match(;
+          document.getElementById("phone_check").innerHTML = "";
+          phoneerror=0;
         }
+        checkerror();
+      }
         function checkpasswords() {
           x=document.getElementById("pass").value;
           y=document.getElementById("reenter").value;
