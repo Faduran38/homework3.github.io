@@ -271,7 +271,7 @@ Description: This is a patient registration form to collect information such as 
           <label for="pass">Password: </label>
           <input type="password" id="pass" name="pass" value="FakePSW" placeholder="Password"
             minlength="8" maxlength="30" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" 
-            required>
+            required onblur="validatepassword()" oninput="validatepassword()">
           <input type="checkbox" onclick="maskPass()">Show Password
           <span id="pass_check">
         </div>
