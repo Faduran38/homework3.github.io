@@ -105,16 +105,21 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
   }
       function validateaddress() { // Validates the address to fit the requirements
         let x = document.getElementById("address1").value;
-        if ( x == "") {
-          alert("Please enter in your address");
-          return false;}
+        addresserror = 1; 
+        if (x.length < 2) {
+          document.getElementById("address_check").innerHTML = "Invalid address length.";
+          errorcaught=1;}
         else {
-          document.getElementById("address_check").innerHTML = "Fits parameters";
+          if(x.length>2) {
+            document.getElementById("address_check").innerHTML = "";
+            addresserror=0;}
         }
+          checkerror();
       }
       function validatephone() { //Validates phone number to fit requirements 
         let x = document.getElementById("phone").value;
-        if ( x < 10) {
+        phoneerror=1;
+        if({
           alert("Not enough characters");
           return false;}
         else {
