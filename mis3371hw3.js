@@ -149,7 +149,7 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
     if(passwordinsert.search(/[a-z]/) <1){
       passwordproduct = "Need atleast 1 lowercase letter.";
       errorcaught=1;
-      passworderror=1;}
+      passworderror2=1;}
     else{
       passwordproduct = "" }
     document.getElementById("pass_check").innerHTML = passwordproduct; 
