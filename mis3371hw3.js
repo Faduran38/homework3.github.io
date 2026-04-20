@@ -181,7 +181,7 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
           length.classList.add("invalid); }
                                
 function checkerror() { // Checks if all of the errors are fixed 
-  if (firstnameerror + lastnameerror + emailerror + addresserror + phoneerror + passworderror == 0)
+  if (firstnameerror + lastnameerror + emailerror + addresserror + phoneerror + passworderror + passworderror2 == 0)
   {
     document.getElementById("submit").disabled = false; // If they are fixed then the submit button will be turned back on 
   } // ^This part of the code is referenced from Prof. Messingers class/example
