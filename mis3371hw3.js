@@ -168,4 +168,6 @@ function checkdata() {  // Checks all of the data and makes sure that all elemen
     document.getElementById("submit").disabled = false;
   }
 }
-/* Completion of js file */
+}
+}
+// Completion of JavaScript file 
