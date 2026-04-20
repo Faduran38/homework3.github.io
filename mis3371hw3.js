@@ -119,11 +119,11 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
       function validatephone() { //Validates phone number to fit requirements 
         let x = document.getElementById("phone").value;
         phoneerror=1;
-        if({
-          alert("Not enough characters");
-          return false;}
+        if(x.length < 9) { 
+          document.getElementById("phone_check").innerHTML = "Invalid length.";
+          errorcaught=1;}
         else {
-          document.getElementById("phone_check").innerHTML = "Fits parameters";
+          if(x.match(;
         }
         function checkpasswords() {
           x=document.getElementById("pass").value;
