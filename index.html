@@ -35,22 +35,22 @@ Description: This is a patient registration form to collect information such as 
     <hr>
     <div id="header">
       <form action="mis3371hw3-final.html">
-        <table class="form">
-          <tr class="form">
-            <th class="form" colspan="3">New Patient Registration</th>
+        <table class="registration">
+          <tr class="registration">
+            <th class="registration" colspan="3">New Patient Registration</th>
           </tr>
-          <tr class="form"></tr>
+          <tr class="registration"></tr>
           <td align="left"></td>
         </table>
     </div>
     <!-- Body Elements-->
     <body onload="initialstart()">
       <table>
-        <tr>
           <span>
             <ul>
               <div id="name">
                 <td align="left">
+                  <tr class="registration">
                   <li><label for="firstname">First Name: </label></li>
                   <input type="text" size="30"
                     minlength="1" maxlength="30"
@@ -80,10 +80,9 @@ Description: This is a patient registration form to collect information such as 
                     required>
             </ul>
           </span>
-        </tr>
       </table>
       <span id="gov_name"></span>
-      <tr>
+      <tr class="registration">
         <div id="dob">
           <td><label for="birthdate">Date of Birth: </label></td>
           <input type="date" id="birthdate" name="birthdate"
@@ -92,7 +91,7 @@ Description: This is a patient registration form to collect information such as 
           <span id="dob_check"></span>
         </div>
       </tr>
-      <tr>
+      <tr class="registration">
         <div id="ssn">
           <td><label for="ssn">SSN: </label></td>
           <td>
@@ -103,7 +102,7 @@ Description: This is a patient registration form to collect information such as 
           </td>
         </div>
       </tr>
-      <tr class="form">
+      <tr class="registration">
         <td align="right">
           <label for="address1">Address: </label>
         </td>
@@ -114,7 +113,7 @@ Description: This is a patient registration form to collect information such as 
           <span id="address_check"></span>
         </td>
       </tr>
-      <tr class="form">
+      <tr class="registration">
         <td align="right">
           <label for="city">City: </label>
           <input type="text" size="10" minlength="2" maxlength="30" id="city" name="city" onblur="validatecity()" oninput="validatecity()"
@@ -183,7 +182,7 @@ Description: This is a patient registration form to collect information such as 
               minlength="5" maxlength="5" required>
           </td>
       </tr>
-      <tr>
+      <tr class="registration">
         <div id="gender">
           <label for="gender">Gender: </label>
           <label for="male">Male</label>
@@ -193,7 +192,7 @@ Description: This is a patient registration form to collect information such as 
         </div>
       </tr>
       <div id="contactinformation">
-        <tr class="form">
+        <tr class="registration">
           <td align="right">
             <label for="phone">Phone Number: </label>
             <input type="text" size="30" maxlength="12" oninput="validatephone()"
@@ -201,7 +200,7 @@ Description: This is a patient registration form to collect information such as 
             <span id="phone_check"></span>
           </td>
         </tr>
-        <tr class="form"></tr>
+        <tr class="registration"></tr>
         <td align="right">
           <label for="email">Email: </label>
         </td>
@@ -211,7 +210,7 @@ Description: This is a patient registration form to collect information such as 
           <span id="email_check"></span>
         </td>
       </div>
-      <tr>
+      <tr class="registration">
         <div id="shots">
           <label>Do you have a vaccination?</label>
           <div id="vaccinations" title="Have you recieved a vaccine before?">
@@ -220,11 +219,14 @@ Description: This is a patient registration form to collect information such as 
           </div>
         </div>
       </tr>
+      <tr class="registration">
       <label>Do you have insurance?</label>
       <div id="insurance" title="Do you have insurance?">
         <label><input type="radio" name="insurance" value="yes">Yes</label>
         <label><input type="radio" name="insurance" value="no">No</label>
       </div>
+      </tr>
+      <tr class="registration">
       <div id="medicalHistory">
         <label>Medical History (check all that apply): </label>
         <div id="conditions" title="Select health conditions you have experienced">
@@ -239,11 +241,14 @@ Description: This is a patient registration form to collect information such as 
           <label><input type="checkbox"
                    name="medical" value="flu">Flu</label>
         </div>
+      </tr>
+      <tr class="registration">
         <label for="painrange">What is the current pain you are feeling on the scale from 1-10?</label>
         <input type="range" id="painrange" name="painrange"
           min="1" max="10" title="Please move the scale to how much pain you are currently in">
         <span id="range_check"></span>
-        <tr>
+      </tr>
+        <tr class="registration">
           <div id="pain">
             <label for="comments">Please explain what you are experiencing...</label>
           </div>                                                              
@@ -251,7 +256,7 @@ Description: This is a patient registration form to collect information such as 
             <textarea id="addcomments" placeholder="Add comments here" name="comments" maxlength="200" cols="50" rows="3"></textarea>
         </tr>
       </div>
-      <tr>
+      <tr class="registration">
         <div id="username">
           <label for="userid">User ID: </label>
           <input type="text" id="user" name="user" placeholder="Enter username"
@@ -261,7 +266,7 @@ Description: This is a patient registration form to collect information such as 
           </span>
         </div>
       </tr>
-      <tr>
+      <tr class="registration">
         <div id="password">
           <label for="pass">Password: </label>
           <input type="password" id="pass" name="pass" value="FakePSW" placeholder="Password"
@@ -271,7 +276,7 @@ Description: This is a patient registration form to collect information such as 
           <span id="pass_check">
         </div>
       </tr>
-      <tr>
+      <tr class="registration">
         <label for="reenter">Re-enter Password: </label>
         <input type="password" id="reenter" name="reenter" value="FakePSW" placeholder="Re-enter"
           minlength="8" maxlength="30" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
