@@ -164,4 +164,4 @@ function checkerror() {
     document.getElementById("submit").disabled = false;
   }
 }
-    
+function checkinput() {   
