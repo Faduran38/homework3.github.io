@@ -2,10 +2,10 @@
 Author: Faviana A Duran 
 Program Name: mis3371hw3.js
 Date Created: April 10, 2026
-Date Updated: April 17, 2026
+Date Updated: April 19, 2026
 Description: Validating elements and adding advanced editing 
 */
-function initialstart() {
+function initialstart() { //This is initiating all of the variables that are referenced in the js file 
   let errorcaught;
   let firstnameerror;
   let lastnameerror;
@@ -35,7 +35,7 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
       x.type = "password";
     }
   }
-    function maskReenter() {
+    function maskReenter() { //Masks the re-enter password text 
       var x = document.getElementById("reenter");
       if(x.type === "password") {
         x.type = "text";}
@@ -58,27 +58,27 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
         if(e.target.value.length === 7) {
           ssn.value = ssn.value + "-"};
       }
-      function validatefirstname() {
+      function validatefirstname() { //Validates first name 
         let x = document.getElementById("firstname").value;
-        firstnameerror = "1";
+        firstnameerror = 1; //Makes the error turn on 
         if(x.length< 2) {
           document.getElementById("gov_name").innerHTML = "Please add more characters.";
-        errorcaught = "1"; }
+        errorcaught = 1; } //There was an error that was caught by there being less than 2 characters 
         else {
-          if(x.match(/[A-Za-z-']+$/)) {
+          if(x.match(/[A-Za-z-']+$/)) { // If the first name matches the pattern then the error flag turns off 
             document.getElementById("gov_name").innerHTML= "";
             firstnameerror = "0"; }
           }
         checkerror();
   } 
-  function validatelastname() {
+  function validatelastname() { // Validates the last name entered
     let x = document.getElementById("lastname").value;
-    lastnameerror = 1;
+    lastnameerror = 1; // Turns on error flag for the last name input 
     if(x.length<2) {
       document.getElementById("gov_name").innerHTML = "Please add more characters.";
-    errorcaught=1; }
+    errorcaught=1; } // If the length is less than 2 characters, an error is displayed 
     else {
-      if(x.match(/[A-Za-z-']+$/)) {
+      if(x.match(/[A-Za-z-']+$/)) { // If the last name matches this pattern, it will be valid
         document.getElementById("gove_name").innerHTML = '';
         lastnameerror = 0;}
     }
@@ -98,7 +98,7 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
           document.getElementById("email_check").innerHTML = "Invalid email length.";
         errorcaught=1; }
         else {
-          if(x.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+          if(x.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) { // Email must fit this pattern for the error to turn off 
             document.getElementById("email_check").innerHTML = '';
             emailerror = 0;}
       }
@@ -111,7 +111,7 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
           document.getElementById("address_check").innerHTML = "Invalid address length.";
           errorcaught=1;}
         else {
-          if(x.length>2) {
+          if(x.length>2) { // Email address must be greater than 2 characters for the error flag to turn off 
             document.getElementById("address_check").innerHTML = "";
             addresserror=0;}
         }
@@ -129,11 +129,11 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
         }
         checkerror();
       }
-        function checkpasswords() {
+        function checkpasswords() { // This makes sure that both of the passwords match 
           x=document.getElementById("pass").value;
           y=document.getElementById("reenter").value;
           passworderror=1;
-          if(x.value != "" && x==y) {
+          if(x.value != "" && x===y) { 
             document.getElementById("reenter_check").innerHTML = "Passwords match."; 
           passworderror=0; }
           else {
@@ -141,7 +141,7 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
          errorcaught=1; }
           checkerror();
         }
-  function validatepassword() {
+  function validatepassword() { //Validates the password input 
     passworderror2=0;
     var passwordproduct;
     var passwordinsert = document.getElementById("pass").value;
@@ -158,7 +158,7 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
     document.getElementById("pass_check").innerHTML = passwordproduct;
     checkerror();
   }
-        var upperCaseLetters = /[A-Z]/g; // Validates the password field to make sure it has all of the elements required
+        var upperCaseLetters = /[A-Z]/g; // Gives a list of the password requirements to make sure it has all of the elements
         if(myInput.value.match(upperCaseLetters)) {
           capital.classList.remove("invalid");
           capital.classList.add("valid"); }
@@ -180,13 +180,13 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
           length.classList.remove("valid");
           length.classList.add("invalid); }
                                
-function checkerror() {
+function checkerror() { // Checks if all of the errors are fixed 
   if (firstnameerror + lastnameerror + emailerror + addresserror + phoneerror + passworderror == 0)
   {
-    document.getElementById("submit").disabled = false;
-  }
+    document.getElementById("submit").disabled = false; // If they are fixed then the submit button will be turned back on 
+  } // ^This part of the code is referenced from Prof. Messingers class/example
 }
-function checkdata() {  
+function checkdata() {  // Checks all of the data and makes sure that all elements are validated so user can submit
   errorcaught = "0";
   validatefirstname();
   validatelastname();
