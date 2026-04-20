@@ -178,7 +178,7 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
           length.classList.add("valid"); }
         else {
           length.classList.remove("valid");
-          length.classList.add("invalid); }
+          length.classList.add("invalid"); }
                                
 function checkerror() { // Checks if all of the errors are fixed 
   if (firstnameerror + lastnameerror + emailerror + addresserror + phoneerror + passworderror + passworderror2 == 0)
