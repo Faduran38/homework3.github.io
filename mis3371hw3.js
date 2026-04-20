@@ -164,4 +164,18 @@ function checkerror() {
     document.getElementById("submit").disabled = false;
   }
 }
-function checkinput() {   
+function checkdata() {  
+  errorcaught = "0";
+  validatefirstname();
+  validatelastname();
+  validateemail();
+  validatephone();
+  validateaddress();
+  checkpasswords();
+  console.log("Error made: " +errorcaught);
+  if(errorcaught == "1"){
+    alert("Please fix errors on the form.");}
+  else {
+    document.getElementById("submit").disabled = false;
+  }
+}
