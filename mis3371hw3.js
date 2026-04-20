@@ -131,11 +131,15 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
         function checkpasswords() {
           x=document.getElementById("pass").value;
           y=document.getElementById("reenter").value;
+          passworderror=1;
           if(x.value != "" && x==y) {
-            document.getElementById("reenter_check").innerHTML = "Passwords match."; }
+            document.getElementById("reenter_check").innerHTML = "Passwords match."; 
+          passworderror=0; }
           else {
             document.getElementById("reenter_check").innerHTML = "Passwords need to match."; 
-          }
+         errorcaught=1; }
+          checkerror();
+        }
         var upperCaseLetters = /[A-Z]/g; // Validates the password field to make sure it has all of the elements required
         if(myInput.value.match(upperCaseLetters)) {
           capital.classList.remove("invalid");
