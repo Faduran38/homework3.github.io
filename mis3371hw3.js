@@ -153,6 +153,11 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
     else{
       passwordproduct = "" }
     document.getElementById("pass_check").innerHTML = passwordproduct; 
+    if(passwordinsert.length < 8) {
+      passwordproduct = "Must enter more characters."; }
+    document.getElementById("pass_check").innerHTML = passwordproduct;
+    checkerror();
+  }
         var upperCaseLetters = /[A-Z]/g; // Validates the password field to make sure it has all of the elements required
         if(myInput.value.match(upperCaseLetters)) {
           capital.classList.remove("invalid");
