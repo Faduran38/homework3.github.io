@@ -6,14 +6,8 @@ Date Updated: April 19, 2026
 Description: Validating elements and adding advanced editing 
 */
 function initialstart() { //This is initiating all of the variables that are referenced in the js file 
-  let errorcaught;
-  let firstnameerror;
-  let lastnameerror;
-  let emailerror;
-  let phoneerror;
-  let addresserror;
-  let passworderror;
-  let passworderror2;
+  var errorcaught = 0;
+  console.log(errorcaught);
   checkdata();
   checkerror();
 }
@@ -60,27 +54,23 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
       }
       function validatefirstname() { //Validates first name 
         let x = document.getElementById("firstname").value;
-        firstnameerror = 1; //Makes the error turn on 
         if(x.length< 2) {
           document.getElementById("gov_name").innerHTML = "Please add more characters.";
         errorcaught = 1; } //There was an error that was caught by there being less than 2 characters 
         else {
           if(x.match(/[A-Za-z-']+$/)) { // If the first name matches the pattern then the error flag turns off 
-            document.getElementById("gov_name").innerHTML= "";
-            firstnameerror = "0"; }
+            document.getElementById("gov_name").innerHTML= ""; }
           }
         checkerror();
   } 
   function validatelastname() { // Validates the last name entered
     let x = document.getElementById("lastname").value;
-    lastnameerror = 1; // Turns on error flag for the last name input 
     if(x.length<2) {
       document.getElementById("gov_name").innerHTML = "Please add more characters.";
     errorcaught=1; } // If the length is less than 2 characters, an error is displayed 
     else {
       if(x.match(/[A-Za-z-']+$/)) { // If the last name matches this pattern, it will be valid
-        document.getElementById("gove_name").innerHTML = '';
-        lastnameerror = 0;}
+        document.getElementById("gove_name").innerHTML = '';}
     }
     checkerror();
   }
@@ -93,63 +83,53 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
       }
       function validateemail() { // Validates the email to fit the requirements 
         let x = document.getElementById("email").value;
-        emailerror= 1;
         if (x.length < 5) {
           document.getElementById("email_check").innerHTML = "Invalid email length.";
         errorcaught=1; }
         else {
           if(x.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) { // Email must fit this pattern for the error to turn off 
-            document.getElementById("email_check").innerHTML = '';
-            emailerror = 0;}
+            document.getElementById("email_check").innerHTML = '';}
       }
         checkerror();
   }
       function validateaddress() { // Validates the address to fit the requirements
         let x = document.getElementById("address1").value;
-        addresserror = 1; 
         if (x.length < 2) {
           document.getElementById("address_check").innerHTML = "Invalid address length.";
           errorcaught=1;}
         else {
           if(x.length>2) { // Email address must be greater than 2 characters for the error flag to turn off 
-            document.getElementById("address_check").innerHTML = "";
-            addresserror=0;}
+            document.getElementById("address_check").innerHTML = "";}
         }
           checkerror();
       }
       function validatephone() { //Validates phone number to fit requirements 
         let x = document.getElementById("phone").value;
-        phoneerror=1;
         if(x.length < 9) { 
           document.getElementById("phone_check").innerHTML = "Invalid length.";
           errorcaught=1;}
         else {
           document.getElementById("phone_check").innerHTML = "";
-          phoneerror=0;
         }
         checkerror();
       }
         function checkpasswords() { // This makes sure that both of the passwords match 
           x=document.getElementById("pass").value;
           y=document.getElementById("reenter").value;
-          passworderror=1;
           if(x.value != "" && x===y) { 
-            document.getElementById("reenter_check").innerHTML = "Passwords match."; 
-          passworderror=0; }
+            document.getElementById("reenter_check").innerHTML = "Passwords match."; }
           else {
             document.getElementById("reenter_check").innerHTML = "Passwords need to match."; 
          errorcaught=1; }
           checkerror();
         }
   function validatepassword() { //Validates the password input 
-    passworderror2=0;
     var passwordproduct;
     var passwordinsert = document.getElementById("pass").value;
     console.log(passwordinsert);
     if(passwordinsert.search(/[a-z]/) <1){
       passwordproduct = "Need atleast 1 lowercase letter.";
-      errorcaught=1;
-      passworderror2=1;}
+      errorcaught=1;}
     else{
       passwordproduct = "" }
     document.getElementById("pass_check").innerHTML = passwordproduct; 
@@ -179,13 +159,7 @@ function validatessn() { //Validates the ssn input, if it doesn't fit requiremen
         else {
           length.classList.remove("valid");
           length.classList.add("invalid"); }
-                               
-function checkerror() { // Checks if all of the errors are fixed 
-  if (firstnameerror + lastnameerror + emailerror + addresserror + phoneerror + passworderror + passworderror2 == 0)
-  {
-    document.getElementById("submit").disabled = false; // If they are fixed then the submit button will be turned back on 
-  } // ^This part of the code is referenced from Prof. Messingers class/example
-}
+
 function checkdata() {  // Checks all of the data and makes sure that all elements are validated so user can submit
   errorcaught = "0";
   validatefirstname();
