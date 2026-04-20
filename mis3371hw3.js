@@ -194,6 +194,7 @@ function checkdata() {  // Checks all of the data and makes sure that all elemen
   validatephone();
   validateaddress();
   checkpasswords();
+  validatepassword();
   console.log("Error made: " +errorcaught);
   if(errorcaught == "1"){
     alert("Please fix errors on the form.");}
